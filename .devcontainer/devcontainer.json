@@ -1,5 +1,10 @@
 {
   "name": "Python 3",
   "image": "mcr.microsoft.com/devcontainers/python:3.10",
-  "postCreateCommand": "pip install -r requirements.txt"
+  "postCreateCommand": "pip install -r requirements.txt",
+  "customizations": {
+    "codespaces": {
+      "openFiles": ["product/ui/ControlPanel.ipynb"]
+    }
+  }
 }
