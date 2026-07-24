@@ -31,7 +31,7 @@ The system receives sensor data in real time and classifies the engine state as 
 
 The system runs through the complete labeled dataset — 164,920 rows — and compares its predictions against the ground truth, reaching 99.8% accuracy.
 
-[▶ **Watch the TEST demo**](https://youtu.be/VKA1xyABw7Q)
+[▶ **Watch the TEST demo**](https://youtu.be/ZeJaeyeq9EE)
 
 <img width="1036" alt="TEST mode — prediction table" src="https://github.com/user-attachments/assets/fbf46dc2-f5da-4319-83d0-7883a4c6adf4" />
 
