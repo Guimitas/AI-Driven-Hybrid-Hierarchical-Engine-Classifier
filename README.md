@@ -1,14 +1,14 @@
 # AI-Driven Hybrid-Hierarchical Engine Classifier
 
-A hierarchical machine learning system that classifies **15 engine states** — Engine Off (cold / warm), Engine Start, three load levels (Normal / High / Critical) each with accelerating, idle, and decelerating behavior, plus three sensor-fault states (Uncalibrated, Frozen Sensor, Error Value) — from four time-series inputs: Temperature, Pressure, RPM, and Vibration. Built as a hierarchy combining rule-based detectors, Random Forest, and CNN models, reaching 99%+ precision on synthetic data.
+A hierarchical machine learning system that classifies **15 engine states** — Engine Off (cold / warm), Engine Start, three load levels (Normal / High / Critical) each with accelerating, idle, and decelerating behavior, plus three sensor-fault states (Uncalibrated, Frozen Sensor, Error Value) — from four time-series inputs: Temperature, Pressure, RPM, and Vibration. Built as a hierarchy combining rule-based detectors, Random Forest, and CNN models, reaching 99.8% accuracy on synthetic data.
 
-**Why this project exists:** I'm a mechanical engineering student with no formal AI education — my background came from online courses (IBM's "Python for Data Science, AI & Development" and DeepLearning.AI's "AI For Everyone"). This was a self-directed learning project: build a complete engine-state classification system from scratch — defining the states, generating and processing the data, designing the architecture, training the models, and testing the result — to find out first-hand what standard ML models can and can't do. Over two months of building, breaking, and rebuilding, the biggest lesson was how limited these models are without guidance — patterns I could spot by eye were invisible to a single generic model. Reaching ~99% precision required restructuring the whole system around the physics of the problem.
+**Why this project exists:** I'm a mechanical engineering student with no formal AI education — my background came from online courses (IBM's "Python for Data Science, AI & Development" and DeepLearning.AI's "AI For Everyone"). This was a self-directed learning project: build a complete engine-state classification system from scratch — defining the states, generating and processing the data, designing the architecture, training the models, and testing the result — to find out first-hand what standard ML models can and can't do. Over two months of building, breaking, and rebuilding, the biggest lesson was how limited these models are without guidance — patterns I could spot by eye were invisible to a single generic model. Reaching 99.8% accuracy required restructuring the whole system around the physics of the problem.
 
 ---
 
 ## 🎬 Quick Overview
 
-*Short on time? This short video explains, in simple terms, how the final system works and how it reached 99% precision:*
+*Short on time? This short video explains, in simple terms, how the final system works and how it reached 99.8% accuracy:*
 
 [▶ **Watch the overview video**](https://youtu.be/_TW-erKZu38)
 
@@ -33,7 +33,7 @@ The system runs through the complete labeled dataset — 164,920 rows — and co
 
 [▶ **Watch the TEST demo**](https://youtu.be/VKA1xyABw7Q)
 
-<img width="1036" alt="Captura de ecrã 2026-07-23 211323" src="https://github.com/user-attachments/assets/fbf46dc2-f5da-4319-83d0-7883a4c6adf4" />
+<img width="1036" alt="TEST mode — prediction table" src="https://github.com/user-attachments/assets/fbf46dc2-f5da-4319-83d0-7883a4c6adf4" />
 
 
 > **Why not 100%?** Nearly all misclassifications occur at the boundary between adjacent states (e.g., Normal vs High Load, or idle vs decelerating, where the defining values differ by less than one unit). Windows sitting exactly on a class boundary are inherently ambiguous — this is a property of how the states are defined, not a model failure. Notably, the system makes no serious errors: it never confuses NormalLoad with CriticalLoad, and never raises a false fault alert.
