@@ -8,7 +8,7 @@ A hierarchical machine learning system that classifies **15 engine states** — 
 
 *Short on time? This short video explains, in simple terms, how the final system works and how it reached 99% precision:*
 
-[▶ **Watch the overview video**](VIDEO_LINK_HERE)
+[▶ **Watch the overview video**](https://youtu.be/_TW-erKZu38)
 
 
 🔴 Demo 1 — LIVE Mode (Real-Time Classification)
@@ -17,8 +17,7 @@ The system receives sensor data in real time and classifies the engine state as 
 
 ▶ Watch the LIVE demo
 
-Mostrar Imagem
-
+<img width="320" height="180" alt="image" src="https://github.com/user-attachments/assets/8828eb7a-8300-4378-b487-47f6c3dad0ef" />
 
 🧪 Demo 2 — TEST Mode (Full Dataset Evaluation)
 
@@ -26,8 +25,7 @@ The system runs through the complete labeled dataset and compares its prediction
 
 ▶ Watch the TEST demo
 
-Mostrar Imagem
-
+<img width="1036" height="430" alt="image" src="https://github.com/user-attachments/assets/e7cf77c2-535e-4cd7-939a-5d9ea34cedda" />
 
 Why not 100%? Nearly all misclassifications occur at the boundary between adjacent states (e.g., Normal vs High Load, where the defining values differ by less than 1 unit). Windows sitting exactly on a class boundary are inherently ambiguous — this is a property of how the states are defined, not a model failure. Away from boundaries, classification is essentially perfect.
 
@@ -36,7 +34,7 @@ Why not 100%? Nearly all misclassifications occur at the boundary between adjace
 
 🧠 System Architecture
 
-Mostrar Imagem
+<img width="1040" height="580" alt="image" src="https://github.com/user-attachments/assets/f61fd043-e016-48b0-8932-2d7b1ba3b890" />
 
 Instead of one generic model handling every state, the system splits the problem into a hierarchy where each stage handles the task it's suited for:
 
