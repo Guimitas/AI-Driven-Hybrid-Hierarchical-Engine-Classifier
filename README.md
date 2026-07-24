@@ -21,7 +21,8 @@ The system receives sensor data in real time and classifies the engine state as 
 [▶ **Watch the LIVE demo**](https://youtu.be/8lmq0rs_uAA)
 
 
-<img width="1036" alt="TEST mode" src="https://github.com/user-attachments/assets/84469aec-6093-44cd-8835-7c3fe595c134" />
+<img width="1036" alt="Captura de ecrã 2026-07-23 211323" src="https://github.com/user-attachments/assets/fbf46dc2-f5da-4319-83d0-7883a4c6adf4" />
+
 
 
 ---
