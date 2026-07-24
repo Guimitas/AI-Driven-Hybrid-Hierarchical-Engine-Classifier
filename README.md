@@ -21,7 +21,7 @@ The system receives sensor data in real time and classifies the engine state as 
 [▶ **Watch the LIVE demo**](https://youtu.be/8lmq0rs_uAA)
 
 
-<img width="1036" alt="Captura de ecrã 2026-07-23 211323" src="https://github.com/user-attachments/assets/fbf46dc2-f5da-4319-83d0-7883a4c6adf4" />
+<img width="1036" alt="LIVE mode" src="https://github.com/user-attachments/assets/3a24e6fb-226c-4250-ba00-ff17eed83e13" />
 
 
 
@@ -33,7 +33,7 @@ The system runs through the complete labeled dataset — 164,920 rows — and co
 
 [▶ **Watch the TEST demo**](https://youtu.be/VKA1xyABw7Q)
 
-<img width="1036" alt="TEST mode" src="URL_QUE_O_GITHUB_TE_DER" />
+<img width="1036" alt="Captura de ecrã 2026-07-23 211323" src="https://github.com/user-attachments/assets/fbf46dc2-f5da-4319-83d0-7883a4c6adf4" />
 
 
 > **Why not 100%?** Nearly all misclassifications occur at the boundary between adjacent states (e.g., Normal vs High Load, or idle vs decelerating, where the defining values differ by less than one unit). Windows sitting exactly on a class boundary are inherently ambiguous — this is a property of how the states are defined, not a model failure. Notably, the system makes no serious errors: it never confuses NormalLoad with CriticalLoad, and never raises a false fault alert.
