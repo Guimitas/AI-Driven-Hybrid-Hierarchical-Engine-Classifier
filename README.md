@@ -49,7 +49,7 @@ Instead of one generic model handling every state, the system splits the problem
 - **Rule-based detectors (hard-coded):** frozen sensor and error-value detection — deterministic faults don't need ML.
 - **M0:** uncalibrated detection
 - **M1:** engine start detection
-- **M2:** Engine Off — cold vs cooling
+- **M2:** Engine Off — cold vs warm
 - **M3 + M4:** load level (Normal / High / Critical) + behavior (idle / accelerating / decelerating)
 
 Models are a mix of rule-based logic, Random Forest, and CNN — each chosen for the pattern type it handles best.
