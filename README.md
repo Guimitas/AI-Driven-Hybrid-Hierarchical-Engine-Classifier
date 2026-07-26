@@ -73,9 +73,11 @@ Trained and evaluated on synthetic Python-generated data (with added noise). Rea
 ## 📁 Repository Structure
 
 ```
-├── data/          # Synthetic data generation scripts
-├── models/        # Trained models (rule-based, Random Forest, CNN)
-├── ui/            # Real-time classification interface
-├── docs/          # Full technical report (PDF)
+├── Phase1_Engine_State_v2.0/
+│   ├── notebooks/     # Data generation, training and evaluation
+│   ├── models/        # Trained models (Random Forest, CNN)
+│   ├── product/       # Runtime system + control panel UI
+│   └── data/          # Synthetic datasets (regenerable, not versioned)
+├── TECHNICAL_REPORT.pdf
 └── README.md
 ```
