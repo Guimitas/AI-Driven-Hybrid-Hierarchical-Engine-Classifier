@@ -60,7 +60,7 @@ Models are a mix of rule-based logic, Random Forest, and CNN — each chosen for
 
 The complete report — state definitions, synthetic data generation, architecture decisions, errors made along the way, and lessons learned — is available here:
 
-[**📄 Download the Full Technical Report (PDF)**](REPORT_LINK_HERE)
+[**📄 Download the Full Technical Report (PDF)**](TECHNICAL_REPORT.pdf)
 
 ---
 
