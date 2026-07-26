@@ -72,12 +72,28 @@ Trained and evaluated on synthetic Python-generated data (with added noise). Rea
 
 ## 📁 Repository Structure
 
-```
 ├── Phase1_Engine_State_v2.0/
-│   ├── notebooks/     # Data generation, training and evaluation
-│   ├── models/        # Trained models (Random Forest, CNN)
-│   ├── product/       # Runtime system + control panel UI
-│   └── data/          # Synthetic datasets (regenerable, not versioned)
+│   ├── notebooks/     # Data generation, model training, and evaluation
+│   ├── models/        # The five trained models — ready to run without retraining
+│   ├── product/       # Final runtime system + control-panel UI
+│   └── data/          # Empty folders; populated by running the generators
 ├── TECHNICAL_REPORT.pdf
+├── requirements.txt
 └── README.md
-```
+
+## 🚀 Running the Project
+
+The dataset is synthetic and regenerable — you generate it locally rather than
+downloading it. Fixed random seeds mean you get identical data every time, so
+nothing large needs to live in the repo.
+
+1. **Install dependencies:** `pip install -r requirements.txt`
+2. **Generate the data:** run the notebooks in `notebooks/` (data-generation
+   section) to populate the empty `data/` folders.
+3. **Train the models** *(optional — trained models are already in `models/`)*:
+   run the training notebooks in order, M0 → M1 → M2 → M3 → M4.
+4. **Run the system:** open the control panel in `product/` and toggle System ON.
+   - **LIVE** mode streams simulated sensor data in real time.
+   - **TEST** mode runs the full 164,920-row benchmark.
+
+*Requirements: Python 3.10+, with the packages in `requirements.txt`.*
