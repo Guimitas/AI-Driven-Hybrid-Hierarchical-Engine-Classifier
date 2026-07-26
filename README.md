@@ -81,6 +81,8 @@ Trained and evaluated on synthetic Python-generated data (with added noise). Rea
 ├── requirements.txt
 └── README.md
 
+---
+
 ## 🚀 Running the Project
 
 The dataset is synthetic and regenerable — you generate it locally rather than
