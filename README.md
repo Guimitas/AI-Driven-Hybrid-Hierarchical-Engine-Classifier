@@ -146,19 +146,7 @@ Pre-trained models are included — skip this unless you want to reproduce train
 > | 🖼️ **Claude** | Report structure & intro/outro imagery |
 > | ⚙️ **ChatGPT (GPT-4/5) & Gemini** | Code synthesis — data generators, training, runtime |
 
-## 🤖 AI Use & Credit
-
-> **A note on AI usage.** As an AI-focused project, several tools were used to accelerate execution:
->
-> | Tool | Role |
-> |------|------|
-> | 🎙️ **ElevenLabs** | Voiceover for the overview video |
-> | 🖼️ **Claude** | Report structure & intro/outro imagery |
-> | ⚙️ **ChatGPT (GPT-4/5) & Gemini** | Code synthesis — data generators, training, runtime |
-
 The goal of this project was never to demonstrate Python skill. Despite Python classes in high school and university — and extra online courses such as IBM's *Python for Data Science* (certificate in my portfolio) — the aim was to find the limitations of these models and understand the other side of the coin, as a mechanical engineering student with zero AI training.
-
----
 
 ### ⚖️ Code Ownership vs. Systems Engineering
 
