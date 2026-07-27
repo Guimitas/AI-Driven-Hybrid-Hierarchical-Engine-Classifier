@@ -72,6 +72,7 @@ Trained and evaluated on synthetic Python-generated data (with added noise). Rea
 
 ## 📁 Repository Structure
 
+```
 ├── Phase1_Engine_State_v2.0/
 │   ├── notebooks/     # Data generation, model training, and evaluation
 │   ├── models/        # The five trained models — ready to run without retraining
@@ -80,22 +81,57 @@ Trained and evaluated on synthetic Python-generated data (with added noise). Rea
 ├── TECHNICAL_REPORT.pdf
 ├── requirements.txt
 └── README.md
+```
+
+## 🛠️ Run It Yourself
+
+**You will need:** Python 3.10+ · Jupyter · the packages below:
+
+    pip install -r requirements.txt
+
+*(tensorflow · scikit-learn · numpy · pandas · ipywidgets · joblib · matplotlib)*
+
+All data is synthetic and regenerated locally — fixed seeds, identical results, nothing to download.
 
 ---
 
-## 🚀 Running the Project
+### 1 · Generate the test dataset
 
-The dataset is synthetic and regenerable — you generate it locally rather than
-downloading it. Fixed random seeds mean you get identical data every time, so
-nothing large needs to live in the repo.
+📂 `notebooks/DataGeneration/ModelFusion.SensorSimulation/` — run the 9 notebooks **in this order** (later ones build on top of earlier data):
 
-1. **Install dependencies:** `pip install -r requirements.txt`
-2. **Generate the data:** run the notebooks in `notebooks/` (data-generation
-   section) to populate the empty `data/` folders.
-3. **Train the models** *(optional — trained models are already in `models/`)*:
-   run the training notebooks in order, M0 → M1 → M2 → M3 → M4.
-4. **Run the system:** open the control panel in `product/` and toggle System ON.
-   - **LIVE** mode streams simulated sensor data in real time.
-   - **TEST** mode runs the full 164,920-row benchmark.
+| # | Notebook | What it does |
+|---|----------|--------------|
+| 1–5 | `EngineOff.SIM` → `EngineNormalLoad.SIM` → `EngineHighLoad.SIM` → `EngineCriticalLoad.SIM` → `EngineStart.SIM` | Generates each engine state |
+| 6 | `EngineOCC.Train.SIM` | Creates the uncalibrated fault data |
+| 7 | `EngineOCC.SIM` | Adds frozen-sensor + error-value faults on top |
+| 8 | `SensorSimulator.DataCore.SIM` | Arranges everything into a realistic engine sequence (off → start → load …) |
+| 9 | `SensorSimulator.Benchmark.SIM` | Labels every row → final test set (`engine_total_X.npy` + `Y`) |
 
-*Requirements: Python 3.10+, with the packages in `requirements.txt`.*
+> ✅ Each notebook prints **DONE** when finished. To verify, check `data/simulation/` — you'll find the `X`, the `Y`, and a `.csv` you can open to inspect the data manually.
+
+---
+
+### 2 · Run the system
+
+Open **`product/ui/ControlPanel.ipynb`** and run it. A panel appears with two toggles:
+
+| Mode | What it does |
+|------|--------------|
+| 🧪 **TEST** | Runs the full 164,920-row benchmark against the ground-truth labels |
+| 🔴 **LIVE** | Streams simulated sensor data and classifies it in real time |
+
+Takes ~10 s to start. No required order — toggle **ON / OFF / TEST / LIVE** freely, it's fool-proof.
+
+---
+
+### 3 · (Optional) Retrain the models
+
+Pre-trained models are included — skip this unless you want to reproduce training.
+
+**a. Regenerate the training data** — in `notebooks/DataGeneration/`, run the model folders in order:
+
+`Model02.EngineOff` → `Model03.NormalLoad` → `Model03.HighLoad` → `Model03.CriticalLoad` → `Model04.Behaviour` → `Model01.EngineStart` → `Model00.RouterOCC` → `Model00,01.Router` → `Model00,01.Router.V2.0`
+
+**b. Train** — in `notebooks/ModelTraining/`, run folders `Model0` → `Model4`. Some finish in seconds; the CNNs can take 20+ minutes.
+
+> ⚠️ CNN training is stochastic — retraining may land slightly above or below the reported accuracies. A stronger machine makes this faster.
