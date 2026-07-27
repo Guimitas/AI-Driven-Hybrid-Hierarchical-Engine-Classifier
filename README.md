@@ -137,23 +137,19 @@ Pre-trained models are included — skip this unless you want to reproduce train
 > ⚠️ CNN training is stochastic — retraining may land slightly above or below the reported accuracies. A stronger machine makes this faster.
 ---
 
-## 🔎 A note on AI use
+## 🤖 AI Use & Credit
 
-As you'd expect from an AI-focused project, this work made heavy use of AI tools —
-and being clear about which is part of the point, since knowing where these tools
-help and where they don't is the subject of the project itself.
+> **A note on AI usage.** As an AI-focused project, several tools were used to accelerate execution:
+>
+> | Tool | Role |
+> |------|------|
+> | 🎙️ **ElevenLabs** | Voiceover for the overview video |
+> | 🖼️ **Claude** | Report structure & intro/outro imagery |
+> | ⚙️ **ChatGPT (GPT-4/5) & Gemini** | Code synthesis — data generators, training, runtime |
 
-- **The video:** ElevenLabs for the voiceover; Claude for the intro/outro and step
-  images, and for structuring the report. *(The technical diagrams are my own.)*
-- **The code:** Gemini and ChatGPT were used heavily for the Python implementation.
+### ⚖️ Code Ownership vs. Systems Engineering
 
-**What's mine is everything else** — and it's the part that matters here. The
-architecture, the state definitions, the hierarchy design, the diagnosis of why
-things failed, and the decision to rebuild the entire system from scratch after
-the first version collapsed. That was two months of trial and error and the real
-substance of the project, documented in full in the technical report.
+> [!CAUTION]
+> **I take no credit for the Python coding itself** — the line-by-line writing wasn't mine.
 
-The goal was never to demonstrate coding ability — I've taken Python courses at
-university and high school, plus IBM's "Python for Data Science" on Coursera (in my
-portfolio). The goal was to understand **the other side of the coin**: what machine
-learning can and cannot do, seen from a mechanical engineer's perspective.
+But that is not the same as the code being handed to me. **I was the tutor throughout**: every time an LLM hit a problem it couldn't solve — a silent runtime bug, drifting data, a model that wouldn't converge — it was the Python I learned in
