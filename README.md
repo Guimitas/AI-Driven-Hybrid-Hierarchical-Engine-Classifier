@@ -146,13 +146,27 @@ Pre-trained models are included — skip this unless you want to reproduce train
 > | 🖼️ **Claude** | Report structure & intro/outro imagery |
 > | ⚙️ **ChatGPT (GPT-4/5) & Gemini** | Code synthesis — data generators, training, runtime |
 
+## 🤖 AI Use & Credit
+
+> **A note on AI usage.** As an AI-focused project, several tools were used to accelerate execution:
+>
+> | Tool | Role |
+> |------|------|
+> | 🎙️ **ElevenLabs** | Voiceover for the overview video |
+> | 🖼️ **Claude** | Report structure & intro/outro imagery |
+> | ⚙️ **ChatGPT (GPT-4/5) & Gemini** | Code synthesis — data generators, training, runtime |
+
+The goal of this project was never to demonstrate Python skill. Despite Python classes in high school and university — and extra online courses such as IBM's *Python for Data Science* (certificate in my portfolio) — the aim was to find the limitations of these models and understand the other side of the coin, as a mechanical engineering student with zero AI training.
+
+---
+
 ### ⚖️ Code Ownership vs. Systems Engineering
 
 > [!CAUTION]
 > **I take no credit for the Python coding itself** — the line-by-line writing wasn't mine.
 
 > [!NOTE]
-> The LLMs acted purely as executors, turning my technical instructions into syntax — **high-speed syntax engines** carrying out explicit prompts like *"generate a dataset using these exact physical rules and threshold boundaries."* The reasoning around that code was mine. Every time a model produced something broken — a silent runtime bug, drifting data, a model that wouldn't converge — it was my own analysis, built on the Python I learned in **high school, university, and *Python for Data Science***, that found what was wrong and how to fix it. Directing them was never a shortcut; it was a constant loop of catching what they got wrong and steering them back.
+> The LLMs acted purely as executors, turning my technical instructions into syntax. The reasoning was mine — every time a model produced broken code, it was my own analysis, built on the Python above, that found what was wrong and fixed it. The debugging was engineering, not autocomplete.
 
 > 💡 **The models generated the syntax. The engineering — and the debugging — is mine.**
 
