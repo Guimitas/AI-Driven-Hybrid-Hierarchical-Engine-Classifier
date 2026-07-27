@@ -74,13 +74,13 @@ Trained and evaluated on synthetic Python-generated data (with added noise). Rea
 
 ```
 ├── Phase1_Engine_State_v2.0/
+│   ├── data/          # Empty folders — populated by running the generators
+│   ├── models/        # The five trained models, ready to run without retraining
 │   ├── notebooks/     # Data generation, model training, and evaluation
-│   ├── models/        # The five trained models — ready to run without retraining
-│   ├── product/       # Final runtime system + control-panel UI
-│   └── data/          # Empty folders; populated by running the generators
+│   └── product/       # Final runtime system + control-panel UI
+├── README.md
 ├── TECHNICAL_REPORT.pdf
-├── requirements.txt
-└── README.md
+└── requirements.txt
 ```
 
 ## 🛠️ Run It Yourself
