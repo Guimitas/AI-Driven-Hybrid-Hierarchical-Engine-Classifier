@@ -10,7 +10,7 @@ A hierarchical machine learning system that classifies **15 engine states** — 
 
 *Short on time? This short video explains, in simple terms, how the final system works and how it reached 99.8% accuracy:*
 
-[▶ **Watch the overview video**](https://youtu.be/_TW-erKZu38) — 🔊 Audio narration · 💬 English subtitles available
+[▶ **Watch the overview video**](https://youtu.be/_TW-erKZu38) — 🔊 Audio narration  · 💬 English subtitles available
 
 ---
 
