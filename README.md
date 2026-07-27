@@ -18,7 +18,7 @@ A hierarchical machine learning system that classifies **15 engine states** — 
 
 The system receives sensor data in real time and classifies the engine state as it changes. The UI shows the current state, the decision path through the model hierarchy (e.g., M0 → M1 → M2), and the live sensor context window.
 
-[▶ **Watch the LIVE demo**](https://youtu.be/8lmq0rs_uAA) — *no audio*
+[▶ **Watch the LIVE demo**](https://youtu.be/8lmq0rs_uAA) — 🔇 No Audio
 
 
 <img width="1036" alt="LIVE mode" src="https://github.com/user-attachments/assets/3a24e6fb-226c-4250-ba00-ff17eed83e13" />
@@ -31,8 +31,7 @@ The system receives sensor data in real time and classifies the engine state as 
 
 The system runs through the complete labeled dataset — 164,920 rows — and compares its predictions against the ground truth, reaching 99.8% accuracy.
 
-[▶ **Watch the TEST demo**](https://youtu.be/ZeJaeyeq9EE)
-> 🔊 Audio narration · 💬 English subtitles available
+[▶ **Watch the TEST demo**](https://youtu.be/ZeJaeyeq9EE) — 🔇 No Audio
 
 <img width="1036" alt="TEST mode — prediction table" src="https://github.com/user-attachments/assets/fbf46dc2-f5da-4319-83d0-7883a4c6adf4" />
 
@@ -136,3 +135,25 @@ Pre-trained models are included — skip this unless you want to reproduce train
 **b. Train** — in `notebooks/ModelTraining/`, run folders `Model0` → `Model4`. Some finish in seconds; the CNNs can take 20+ minutes.
 
 > ⚠️ CNN training is stochastic — retraining may land slightly above or below the reported accuracies. A stronger machine makes this faster.
+---
+
+## 🔎 A note on AI use
+
+As you'd expect from an AI-focused project, this work made heavy use of AI tools —
+and being clear about which is part of the point, since knowing where these tools
+help and where they don't is the subject of the project itself.
+
+- **The video:** ElevenLabs for the voiceover; Claude for the intro/outro and step
+  images, and for structuring the report. *(The technical diagrams are my own.)*
+- **The code:** Gemini and ChatGPT were used heavily for the Python implementation.
+
+**What's mine is everything else** — and it's the part that matters here. The
+architecture, the state definitions, the hierarchy design, the diagnosis of why
+things failed, and the decision to rebuild the entire system from scratch after
+the first version collapsed. That was two months of trial and error and the real
+substance of the project, documented in full in the technical report.
+
+The goal was never to demonstrate coding ability — I've taken Python courses at
+university and high school, plus IBM's "Python for Data Science" on Coursera (in my
+portfolio). The goal was to understand **the other side of the coin**: what machine
+learning can and cannot do, seen from a mechanical engineer's perspective.
