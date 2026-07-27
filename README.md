@@ -10,7 +10,7 @@ A hierarchical machine learning system that classifies **15 engine states** — 
 
 *Short on time? This short video explains, in simple terms, how the final system works and how it reached 99.8% accuracy:*
 
-[▶ **Watch the overview video**](https://youtu.be/_TW-erKZu38) — 🔊 Audio narration · 💬 English subtitles available
+[▶ **Watch the overview video**](https://youtu.be/_TW-erKZu38) — 🔊 Audio narration included · 💬 English subtitles available
 
 ---
 
@@ -18,7 +18,7 @@ A hierarchical machine learning system that classifies **15 engine states** — 
 
 The system receives sensor data in real time and classifies the engine state as it changes. The UI shows the current state, the decision path through the model hierarchy (e.g., M0 → M1 → M2), and the live sensor context window.
 
-[▶ **Watch the LIVE demo**](https://youtu.be/8lmq0rs_uAA) — 🔇 No Audio
+[▶ **Watch the LIVE demo**](https://youtu.be/8lmq0rs_uAA) — 🔇 No Audio included
 
 
 <img width="1036" alt="LIVE mode" src="https://github.com/user-attachments/assets/3a24e6fb-226c-4250-ba00-ff17eed83e13" />
@@ -31,7 +31,7 @@ The system receives sensor data in real time and classifies the engine state as 
 
 The system runs through the complete labeled dataset — 164,920 rows — and compares its predictions against the ground truth, reaching 99.8% accuracy.
 
-[▶ **Watch the TEST demo**](https://youtu.be/ZeJaeyeq9EE) — 🔇 No Audio
+[▶ **Watch the TEST demo**](https://youtu.be/ZeJaeyeq9EE) — 🔇 No Audio included
 
 <img width="1036" alt="TEST mode — prediction table" src="https://github.com/user-attachments/assets/fbf46dc2-f5da-4319-83d0-7883a4c6adf4" />
 
